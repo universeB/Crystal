@@ -42,7 +42,7 @@ public class CalculateChangeTask {
 		String sinceCommitDate = exeResult.getOutput();
 
 		String[] gitFilesArgs = { "log", "--since", sinceCommitDate,
-				"--pretty=format:%H;%ci;%cn", "--name-only" };
+				"--pretty=format:\"commit:%H;%ci;%cn\"", "-p" };
 		exeResult = RunIt.execute(myClientPrefs.getGitPath(), gitFilesArgs,
 				myClientPrefs.getTempDirectory(), false);
 
@@ -51,7 +51,7 @@ public class CalculateChangeTask {
 		if (!exeResult.getOutput().equals("")) {
 
 			StringTokenizer stCommit = new StringTokenizer(
-					exeResult.getOutput(), "\n\n");
+					exeResult.getOutput(), "commit:");
 			while (stCommit.hasMoreTokens()) {
 				String oneCommitStr = stCommit.nextToken();
 
