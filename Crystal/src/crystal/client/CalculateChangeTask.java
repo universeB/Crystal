@@ -2,8 +2,6 @@ package crystal.client;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
 import crystal.util.RunIt;
 import crystal.util.RunIt.Output;
@@ -14,12 +12,15 @@ public class CalculateChangeTask {
 		String _commitDate;
 		String _committer;
 		String _commitID;
-		String[] changedFiles;
+		ArrayList<String> changedFiles;
+		ArrayList<String> changedFilesContents;
 
 		changeItem(String commitID, String commitDate, String committer) {
 			_commitID = commitID;
 			_commitDate = commitDate;
 			_committer = committer;
+			changedFiles = new ArrayList<String>();
+			changedFilesContents = new ArrayList<String>();
 		}
 	}
 
@@ -50,18 +51,37 @@ public class CalculateChangeTask {
 
 		if (!exeResult.getOutput().equals("")) {
 
-			StringTokenizer stCommit = new StringTokenizer(
-					exeResult.getOutput(), "commit:");
-			while (stCommit.hasMoreTokens()) {
-				String oneCommitStr = stCommit.nextToken();
+			changeItem oneCommit;
+			String[] stCommit = exeResult.getOutput().split("commit:");
+
+			for (String oneCommitStr : stCommit) {
+				if (oneCommitStr.equals(""))
+					continue;
 
 				String[] oneCommitLines = oneCommitStr.split("\n");
-				String[] oneCommitHeadItem = oneCommitLines[0].split(";");
-				changeItem oneCommit = new changeItem(oneCommitHeadItem[0], oneCommitHeadItem[1],
-						oneCommitHeadItem[2]);
+				
+				String[] headLine = oneCommitLines[0].split(";");
+				oneCommit = new changeItem(headLine[0],
+						headLine[1], headLine[2]);
+				
+				for (int i = 1; i < oneCommitLines.length; i++) {
 
-				oneCommit.changedFiles = Arrays.copyOfRange(oneCommitLines, 1,
-						oneCommitLines.length);
+					if (oneCommitLines[i].startsWith("+++ b")) {
+						oneCommit.changedFiles.add(oneCommitLines[i]
+								.substring(5));
+						
+						String tmpChangeFileString = "";
+						
+						int k;
+						for (k = i + 1; k < oneCommitLines.length; k++)
+							tmpChangeFileString = tmpChangeFileString
+									+ oneCommitLines[k] + "\n";
+						
+						oneCommit.changedFilesContents.add(tmpChangeFileString);
+						System.out.println(tmpChangeFileString);
+						i = k-1;
+					}
+				}
 				longList.add(oneCommit);
 			}
 		}
