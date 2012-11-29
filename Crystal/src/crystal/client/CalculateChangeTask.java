@@ -48,6 +48,15 @@ public class CalculateChangeTask {
 
 	public static ChangeItem performTask(String _gitPath, String myDir,
 			String yourDir) throws IOException {
+		/*
+		 * Format of changed contents of files
+		 * +	Hello world!
+		 * -	commit:8f50504fd04e9854f44c9524a29e0a3ee03aa6e2;2012-11-12 05:48:13 -0500;aurora
+		 * +	
+		 * -	diff --git a/votes/456_aurora b/votes/456_aurora
+		 * +	
+		 * -	new file mode 100644
+		 */
 
 		// ChangedFilesSet is a union set for storing all changed files
 		// Files are uniquely existing in the set

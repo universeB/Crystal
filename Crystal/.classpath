@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="C:/Users/aurora/venet1035-crystal/lib/junit-4.8.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/aurora/venet1035-crystal/lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="C:/Users/aurora/venet1035-crystal/lib-exc/one-jar-ant-task-0.97.jar"/>
+	<classpathentry kind="lib" path="C:/Users/aurora/venet1035-crystal/lib/diffutils-1.2.1.jar" sourcepath="C:/Users/aurora/.m2/repository/com/googlecode/java-diff-utils/diffutils/1.2.1/diffutils-1.2.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
