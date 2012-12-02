@@ -1,0 +1,630 @@
+Hello world!
+
+
+commit:c148ed3ab5072ffe3d209dad3cf2058117f584a7;2012-11-12 05:31:13 -0500;aurora
+diff --git a/votes/123_aurora b/votes/123_aurora
+new file mode 100644
+index 0000000..56a6051
+--- /dev/null
++++ b/votes/123_aurora
+@@ -0,0 +1 @@
++1
+\ No newline at end of file
+diff --git a/votes/345_aurora b/votes/345_aurora
+new file mode 100644
+index 0000000..56a6051
+--- /dev/null
++++ b/votes/345_aurora
+@@ -0,0 +1 @@
++1
+\ No newline at end of file
+
+
+
+commit:26f9624886552da3b4457b5ca90a9c8aad4a6fc5;2012-11-12 04:44:41 -0500;aurora
+diff --git a/src/votes/123_aurora b/src/votes/123_aurora
+new file mode 100644
+index 0000000..56a6051
+--- /dev/null
++++ b/src/votes/123_aurora
+@@ -0,0 +1 @@
++1
+\ No newline at end of file
+
+commit:72aab4833730a18464a21a4c9d46550d6f91e140;2012-11-11 10:46:16 -0500;aurora
+commit:d76f1db9ad8865aec13fa3b1a84449fdb524f7db;2012-11-11 10:39:57 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 2c66e26..585a970 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,7 +19,10 @@ public class HelloDate {
+ 	 *             No exceptions thrown
+ 	 */
+
+
+commit:7fecf16de90f7e83936c7bf4a77e8162fb3e64c8;2012-11-11 10:11:10 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index d1e1bca..7538b3a 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,11 +19,10 @@ public class HelloDate {
+ 	 *             No exceptions thrown
+ 	 */
+ 	public static void main(String[] args) {
+-		System.out.println("Hello, it's: ");
+-		System.out.println(new Date() + ". It good to see you!");
+ 
+ 		System.out.println("Test for the test.");
+-		
++		System.out.println("Hello, it's: ");
++		System.out.println(new Date() + ". It good to see you!");
+ 	}
+ } /*
+  * Output: (55% match) Hello, it's: Wed Oct 05 14:39:36 MDT 2005
+
+commit:7a2bae0ab39bdf36da496ad56d47c4d431cc7c82;2012-11-11 10:09:53 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 7538b3a..d1e1bca 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,10 +19,11 @@ public class HelloDate {
+ 	 *             No exceptions thrown
+ 	 */
+ 	public static void main(String[] args) {
+-
+-		System.out.println("Test for the test.");
+ 		System.out.println("Hello, it's: ");
+ 		System.out.println(new Date() + ". It good to see you!");
++
++		System.out.println("Test for the test.");
++		
+ 	}
+ } /*
+  * Output: (55% match) Hello, it's: Wed Oct 05 14:39:36 MDT 2005
+
+commit:f1a138cbe3feb3781959925c2dfa0e7fd684271f;2012-11-11 10:08:17 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 2c66e26..7538b3a 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -20,6 +20,7 @@ public class HelloDate {
+ 	 */
+ 	public static void main(String[] args) {
+ 
++		System.out.println("Test for the test.");
+ 		System.out.println("Hello, it's: ");
+ 		System.out.println(new Date() + ". It good to see you!");
+ 	}
+
+commit:189c72587a7d43d72c7da3b4a6b56e36b72ad195;2012-11-11 10:06:24 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 16d09bf..2c66e26 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,9 +19,6 @@ public class HelloDate {
+ 	 *             No exceptions thrown
+ 	 */
+ 	public static void main(String[] args) {
+-		int i = 5;
+-		for (int j = 0; j <= 10; j++)
+-			System.out.println(i++);
+ 
+ 		System.out.println("Hello, it's: ");
+ 		System.out.println(new Date() + ". It good to see you!");
+
+commit:7b93a391a79e6487c6d4a0b585115e0c3c464ae9;2012-11-11 10:05:10 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 09b0a3a..16d09bf 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -1,26 +1,31 @@
+ //: object/HelloDate.java
+ import java.util.*;
+ 
+-/** The first Thinking in Java example program.
+- * Displays a string and today's date.
++/**
++ * The first Thinking in Java example program. Displays a string and today's
++ * date.
++ * 
+  * @author Bruce Eckel
+  * @author www.MindView.net
+  * @version 4.0
+-*/
++ */
+ public class HelloDate {
+-  /** Entry point to class & application.
+-   * @param args array of string arguments
+-   * @throws exceptions No exceptions thrown
+-  */
+-  public static void main(String[] args) {
+-	  int i = 5;
+-	  for (int j=0; j<=10; j++)
+-		  System.out.println(i++);
+-	  
+-    System.out.println("Hello, it's: ");
+-    System.out.println(new Date()+". It good to see you!");
+-  }
+-} /* Output: (55% match)
+-Hello, it's:
+-Wed Oct 05 14:39:36 MDT 2005
+-*///:~
++	/**
++	 * Entry point to class & application.
++	 * 
++	 * @param args
++	 *            array of string arguments
++	 * @throws exceptions
++	 *             No exceptions thrown
++	 */
++	public static void main(String[] args) {
++		int i = 5;
++		for (int j = 0; j <= 10; j++)
++			System.out.println(i++);
++
++		System.out.println("Hello, it's: ");
++		System.out.println(new Date() + ". It good to see you!");
++	}
++} /*
++ * Output: (55% match) Hello, it's: Wed Oct 05 14:39:36 MDT 2005
++ */// :~
+
+commit:46f1170228137858f08844d7ed54f8dc77486d89;2012-11-11 10:00:53 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 6cf274e..09b0a3a 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,8 +19,6 @@ public class HelloDate {
+ 	  
+     System.out.println("Hello, it's: ");
+     System.out.println(new Date()+". It good to see you!");
+-    System.out.println("Hello World");
+-	System.out.println("Hello again");
+   }
+ } /* Output: (55% match)
+ Hello, it's:
+
+commit:61f48714de3582703930e6acf1f7a6bc5d1e3555;2012-11-11 10:00:41 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 09b0a3a..6cf274e 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -19,6 +19,8 @@ public class HelloDate {
+ 	  
+     System.out.println("Hello, it's: ");
+     System.out.println(new Date()+". It good to see you!");
++    System.out.println("Hello World");
++	System.out.println("Hello again");
+   }
+ } /* Output: (55% match)
+ Hello, it's:
+
+commit:d544ab1b9b2fa9048ecfbc0a3f6a00a320535ef3;2012-11-11 09:58:00 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 43155fb..09b0a3a 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -18,7 +18,7 @@ public class HelloDate {
+ 		  System.out.println(i++);
+ 	  
+     System.out.println("Hello, it's: ");
+-    System.out.println(new Date());
++    System.out.println(new Date()+". It good to see you!");
+   }
+ } /* Output: (55% match)
+ Hello, it's:
+
+commit:339d2a5a69f0004fc4f0c429d65b0239c4f8e317;2012-11-11 09:57:03 -0500;aurora
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+index 3d30f57..43155fb 100644
+--- a/src/HelloDate.java
++++ b/src/HelloDate.java
+@@ -13,6 +13,10 @@ public class HelloDate {
+    * @throws exceptions No exceptions thrown
+   */
+   public static void main(String[] args) {
++	  int i = 5;
++	  for (int j=0; j<=10; j++)
++		  System.out.println(i++);
++	  
+     System.out.println("Hello, it's: ");
+     System.out.println(new Date());
+   }
+
+commit:49a659124dd81ece4ab7e75501136e53cb2e9844;2012-11-11 09:54:59 -0500;aurora
+diff --git a/bin/HelloDate.class b/bin/HelloDate.class
+new file mode 100644
+index 0000000..42f141e
+Binary files /dev/null and b/bin/HelloDate.class differ
+diff --git a/bin/HelloWorld.class b/bin/HelloWorld.class
+index 1ec495a..b41eb6f 100644
+Binary files a/bin/HelloWorld.class and b/bin/HelloWorld.class differ
+diff --git a/src/HelloDate.java b/src/HelloDate.java
+new file mode 100644
+index 0000000..3d30f57
+--- /dev/null
++++ b/src/HelloDate.java
+@@ -0,0 +1,22 @@
++//: object/HelloDate.java
++import java.util.*;
++
++/** The first Thinking in Java example program.
++ * Displays a string and today's date.
++ * @author Bruce Eckel
++ * @author www.MindView.net
++ * @version 4.0
++*/
++public class HelloDate {
++  /** Entry point to class & application.
++   * @param args array of string arguments
++   * @throws exceptions No exceptions thrown
++  */
++  public static void main(String[] args) {
++    System.out.println("Hello, it's: ");
++    System.out.println(new Date());
++  }
++} /* Output: (55% match)
++Hello, it's:
++Wed Oct 05 14:39:36 MDT 2005
++*///:~
+
+commit:d4ab75e96eb4252393643122619ac5230308d374;2012-10-23 08:13:44 -0400;aurora
+diff --git a/src/HelloWorld.java b/src/HelloWorld.java
+index 142554e..b3c2a01 100644
+--- a/src/HelloWorld.java
++++ b/src/HelloWorld.java
+@@ -2,5 +2,6 @@ public class HelloWorld {
+ 
+ 	public static void main(String[] args) {
+ 		System.out.println("Hello World");
++		System.out.println("Hello again");
+ 	}
+ }
+
+commit:5bd1ad74f6d352419cf6a6f9ded7d8185a653d11;2012-10-23 08:07:28 -0400;aurora
+diff --git a/.classpath b/.classpath
+new file mode 100644
+index 0000000..91ee9a5
+--- /dev/null
++++ b/.classpath
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" path="src"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
++	<classpathentry kind="output" path="bin"/>
++</classpath>
+diff --git a/.project b/.project
+new file mode 100644
+index 0000000..8b3ad90
+--- /dev/null
++++ b/.project
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>TestJava</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++	</natures>
++</projectDescription>
+diff --git a/.settings/org.eclipse.jdt.core.prefs b/.settings/org.eclipse.jdt.core.prefs
+new file mode 100644
+index 0000000..838bd9d
+--- /dev/null
++++ b/.settings/org.eclipse.jdt.core.prefs
+@@ -0,0 +1,11 @@
++eclipse.preferences.version=1
++org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
++org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
++org.eclipse.jdt.core.compiler.compliance=1.7
++org.eclipse.jdt.core.compiler.debug.lineNumber=generate
++org.eclipse.jdt.core.compiler.debug.localVariable=generate
++org.eclipse.jdt.core.compiler.debug.sourceFile=generate
++org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
++org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
++org.eclipse.jdt.core.compiler.source=1.7
+diff --git a/bin/HelloWorld.class b/bin/HelloWorld.class
+new file mode 100644
+index 0000000..1ec495a
+Binary files /dev/null and b/bin/HelloWorld.class differ
+diff --git a/bin/practice1/ActButton.class b/bin/practice1/ActButton.class
+new file mode 100644
+index 0000000..52aab91
+Binary files /dev/null and b/bin/practice1/ActButton.class differ
+diff --git a/bin/practice1/Calc.class b/bin/practice1/Calc.class
+new file mode 100644
+index 0000000..c574f5b
+Binary files /dev/null and b/bin/practice1/Calc.class differ
+diff --git a/bin/practice1/NButton.class b/bin/practice1/NButton.class
+new file mode 100644
+index 0000000..b1ac441
+Binary files /dev/null and b/bin/practice1/NButton.class differ
+diff --git a/src/HelloWorld.java b/src/HelloWorld.java
+new file mode 100644
+index 0000000..142554e
+--- /dev/null
++++ b/src/HelloWorld.java
+@@ -0,0 +1,6 @@
++public class HelloWorld {
++
++	public static void main(String[] args) {
++		System.out.println("Hello World");
++	}
++}
+diff --git a/src/practice1/ActButton.java b/src/practice1/ActButton.java
+new file mode 100644
+index 0000000..7eb8c0b
+--- /dev/null
++++ b/src/practice1/ActButton.java
+@@ -0,0 +1,19 @@
++package practice1;
++
++import javax.swing.JButton;
++
++public class ActButton extends JButton{
++	/**
++	 * 
++	 */
++	private static final long serialVersionUID = 1L;
++	String act;
++	int actNum;
++	
++	ActButton(String actArg, int actNumArg){
++		act = actArg;
++		actNum = actNumArg;
++		setText(act);
++	}
++
++}
+diff --git a/src/practice1/Calc.java b/src/practice1/Calc.java
+new file mode 100644
+index 0000000..c4b8aae
+--- /dev/null
++++ b/src/practice1/Calc.java
+@@ -0,0 +1,211 @@
++package practice1;
++
++import java.awt.Color;
++import java.awt.Container;
++import java.awt.Dimension;
++import java.awt.GridLayout;
++import java.awt.event.ActionEvent;
++import java.awt.event.ActionListener;
++
++import javax.swing.JFrame;
++import javax.swing.JLabel;
++
++public class Calc implements ActionListener {
++	JLabel label;
++	NButton b1;
++	NButton b2;
++	NButton b3;
++	NButton b4;
++	NButton b5;
++	NButton b6;
++	NButton b7;
++	NButton b8;
++	NButton b9;
++	NButton b0;
++
++	ActButton dot;
++	ActButton eq;
++	ActButton plus;
++	ActButton minus;
++	ActButton multi;
++	ActButton div;
++	ActButton ce;
++	ActButton root;
++
++	double ans = 0;
++	double tmpAns = 0;
++	int action = 0;
++	boolean resetField = true;
++
++	Calc() {
++		createAndShowGUI();
++	}
++
++	private void createAndShowGUI() {
++		JFrame frame = new JFrame("Calculator");
++		frame.setSize(300, 300);
++		frame.setLocation(2000, 400);
++		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++		frame.setLayout(new GridLayout(5, 5));
++
++		addComponentToPane(frame.getContentPane());
++
++		// frame.pack();
++		frame.setVisible(true);
++	}
++
++	/**
++	 * @param container
++	 */
++	private void addComponentToPane(Container container) {
++
++		label = new JLabel();
++		label.setPreferredSize(new Dimension(300, 50));
++		label.setVerticalTextPosition(JLabel.BOTTOM);
++		label.setHorizontalTextPosition(JLabel.RIGHT);
++		label.setText("0");
++		label.setBackground(Color.white);
++		container.add(label);
++
++		b1 = new NButton(1);
++		b1.addActionListener(this);
++		container.add(b1);
++		b2 = new NButton(2);
++		b2.addActionListener(this);
++		container.add(b2);
++		b3 = new NButton(3);
++		b3.addActionListener(this);
++		container.add(b3);
++		b4 = new NButton(4);
++		b4.addActionListener(this);
++		container.add(b4);
++		b5 = new NButton(5);
++		b5.addActionListener(this);
++		container.add(b5);
++		b6 = new NButton(6);
++		b6.addActionListener(this);
++		container.add(b6);
++		b7 = new NButton(7);
++		b7.addActionListener(this);
++		container.add(b7);
++		b8 = new NButton(8);
++		b8.addActionListener(this);
++		container.add(b8);
++		b9 = new NButton(9);
++		b9.addActionListener(this);
++		container.add(b9);
++		b0 = new NButton(0);
++		b0.addActionListener(this);
++		container.add(b0);
++
++		eq = new ActButton("=", 0);
++		eq.addActionListener(this);
++		container.add(eq);
++		plus = new ActButton("+", 1);
++		plus.addActionListener(this);
++		container.add(plus);
++		minus = new ActButton("-", 2);
++		minus.addActionListener(this);
++		container.add(minus);
++		multi = new ActButton("*", 3);
++		multi.addActionListener(this);
++		container.add(multi);
++		div = new ActButton("/", 4);
++		div.addActionListener(this);
++		container.add(div);
++		ce = new ActButton("CE", 5);
++		ce.addActionListener(this);
++		container.add(ce);
++		root = new ActButton("rt", 6);
++		root.addActionListener(this);
++		container.add(root);
++		dot = new ActButton(".", 7);
++		dot.addActionListener(this);
++		container.add(dot);
++	}
++
++	public static void main(String[] args) {
++		Calc calculator = new Calc();
++	}
++
++	@Override
++	public void actionPerformed(ActionEvent e) {
++
++		if (e.getSource().getClass().toString()
++				.equals("class practice1.NButton")) {
++
++			if (resetField) {
++				label.setText("");
++				resetField = false;
++			}
++
++			NButton t = (NButton) e.getSource();
++			label.setText(label.getText() + String.valueOf(t.num));
++		} else {
++			if (e.getSource().equals(dot)) {
++				if(!label.getText().endsWith("."))
++					label.setText(label.getText() + ".");
++			} else if (e.getSource().equals(eq)) {
++				tmpAns = Double.parseDouble(label.getText());
++				switch (action) {
++				case 1:
++					ans = ans + tmpAns;
++					break;
++				case 2:
++					ans = ans - tmpAns;
++					break;
++				case 3:
++					ans = ans * tmpAns;
++					break;
++				case 4:
++					ans = ans / tmpAns;
++					break;
++				case 5:
++					break;
++				default:
++					ans = tmpAns;
++					break;
++				}
++
++				label.setText(String.valueOf(ans));
++				ans = 0;
++				tmpAns = 0;
++				action = 0;
++				resetField = true;
++
++			} else if (e.getSource().equals(plus)) {
++				ans = Double.parseDouble(label.getText());
++				action = 1;
++				resetField = true;
++			} else if (e.getSource().equals(minus)) {
++				ans = Double.parseDouble(label.getText());
++				action = 2;
++				resetField = true;
++			} else if (e.getSource().equals(multi)) {
++				ans = Double.parseDouble(label.getText());
++				action = 3;
++				resetField = true;
++			} else if (e.getSource().equals(div)) {
++				ans = Double.parseDouble(label.getText());
++				action = 4;
++				resetField = true;
++			} else if (e.getSource().equals(ce)) {
++				ans = 0;
++				tmpAns = 0;
++				label.setText(String.valueOf(ans));
++				action = 5;
++				resetField = true;
++			} else if (e.getSource().equals(root)) {
++				ans = Double.parseDouble(label.getText());
++				ans = (double) Math.pow(ans, 0.5);
++				System.out.println(ans);
++				label.setText(String.valueOf(ans));
++				action = 6;
++				resetField = true;
++
++			}
++		}
++
++	}
++
++}
+diff --git a/src/practice1/NButton.java b/src/practice1/NButton.java
+new file mode 100644
+index 0000000..97d045e
+--- /dev/null
++++ b/src/practice1/NButton.java
+@@ -0,0 +1,18 @@
++package practice1;
++
++import javax.swing.JButton;
++
++public class NButton extends JButton {
++	/**
++	 * 
++	 */
++	private static final long serialVersionUID = 1L;
++	int num;
++	
++	NButton(int n){
++		num = n;
++		setText(Integer.toString(n));
++	}
++
++	
++}

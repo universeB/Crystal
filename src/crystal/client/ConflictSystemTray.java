@@ -415,7 +415,6 @@ public class ConflictSystemTray implements ComputationListener {
 		// ex.execute(crt);
 		// }
 		// }
-		System.out.println("test");
 
 		for (ProjectPreferences projPref : _prefs.getProjectPreference()) {
 			final CalculateProjectTask cpt = new CalculateProjectTask(projPref, this, _client);
